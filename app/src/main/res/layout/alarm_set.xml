@@ -8,16 +8,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@+id/ll"
-        android:elevation="10dp">
+        android:id="@+id/ll">
 
         <TextView
             android:id="@+id/time"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="9 : 30 AM"
             android:textSize="26dp"
-            android:layout_marginBottom="5dp"/>
+            style="@style/EditSnooze"
+            android:layout_marginBottom="5dp" />
+
+        <TextView
+            android:id="@+id/time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="9 : 30 AM"
+            android:textSize="26dp"
+            style="@style/EditSnooze"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/snooze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Snooze"
+                android:layout_margin="10dp"
+                style="@style/AlarmButtons"/>
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop"
+                android:layout_margin="10dp"
+                style="@style/AlarmButtons"/>
+
+        </LinearLayout>
 
 
     </LinearLayout>

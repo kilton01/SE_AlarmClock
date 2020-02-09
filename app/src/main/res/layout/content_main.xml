@@ -8,41 +8,76 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:id="@+id/linearlayout">
 
-    <TimePicker
-        android:id="@+id/timepicker"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--            android: time format here-->
+        <TextClock
+            android:id="@+id/dclock1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:format12Hour="k:mm"
+            android:visibility="gone"/>
+
+        <TextClock
+            android:id="@+id/dclock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:format24Hour="k:mm" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="24-hour Format"
+            android:textSize="20dp"
+            android:textColor="@color/cardview_light_background"
+            android:padding="10dp"
+            android:theme="@style/SwitchColor" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noAlarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:headerBackground="@color/colorPrimary"
-        android:numbersSelectorColor="@color/colorPrimary"
-        android:visibility="gone"
-        />
-
-    <Button
-        android:id="@+id/setBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:hint="NO ALARM SET"
+        android:textSize="26dp"
         android:layout_gravity="center"
-        android:text="SET"
-        android:visibility="gone"/>
+        style="@style/EditSnooze"
+        android:layout_marginBottom="5dp"
+        android:visibility="visible"/>
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/llayout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:elevation="20dp">
 
         </LinearLayout>
 
     </ScrollView>
-
-
-
-
 
 </LinearLayout>
