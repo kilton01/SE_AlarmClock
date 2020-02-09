@@ -89,14 +89,20 @@ public class MainActivity extends AppCompatActivity {
                     clock.setVisibility(View.GONE);
                     clock1.setVisibility(View.VISIBLE);
 
-                    alarm_time12.setVisibility(View.GONE);
-                    alarm_time.setVisibility(View.VISIBLE);
+                    if(alarm_time12 != null || alarm_time != null){
+                        alarm_time12.setVisibility(View.GONE);
+                        alarm_time.setVisibility(View.VISIBLE);
+                    }
+
                 }else{
                     clock.setVisibility(View.VISIBLE);
                     clock1.setVisibility(View.GONE);
 
-                    alarm_time.setVisibility(View.GONE);
-                    alarm_time12.setVisibility(View.VISIBLE);
+                    if(alarm_time12 != null || alarm_time != null){
+                        alarm_time.setVisibility(View.GONE);
+                        alarm_time12.setVisibility(View.VISIBLE);
+                    }
+
                 }
             }
         });
